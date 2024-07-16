@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert Pop Window</title>
+    <style>
+        input[type=button] {
+        width: 80px;
+        height: 30px;
+        background-color: red;
+    }
+        .scroll {
+            width: 100px;
+            height: 2000px;
+            color: skyblue;
+            border: 1px solid black;
+            display: flex;
+            align-items:flex-end;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="alert" onclick="alert('pop alert')">
+    <input type="button" value="confirm" onclick="confirm('pop confirm')">
+    <input type="button" value="prompt" onclick="prompt('prompt pop')">
+    <div class="scroll">bottom</div>
+</body>
+</html>

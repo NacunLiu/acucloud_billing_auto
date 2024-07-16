@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Iframe</title>
+    <style>
+        body {
+            margin: 5px;
+            padding: 0;
+        }
+
+        .floatleft {
+            float: left
+        }
+
+        .floatright {
+            float: right
+        }
+
+        .clearfix::after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+
+        .bx1 {
+            width: 1910px;
+            height: 540px;
+            border: 1px solid #9d9d9d;
+            position: relative;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th,
+        tr,
+        td {
+            border: 1px solid #888;
+        }
+
+        .bx2 .s1 {
+            width: 50px;
+            height: 25px;
+        }
+
+        .s2 {
+            width: 25px;
+            height: 25px;
+            background-color: red;
+        }
+
+        .s3 {
+            width: 25px;
+            height: 25px;
+            background-color: blue;
+        }
+        span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bx1 clearfix">
+        <h2>Iframe Related</h2>
+        <table class="meter-list floatright">
+            <thead>
+                <tr>
+                    <th>Meter</th>
+                    <th>type</th>
+                    <th>reading</th>
+                    <th>passed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>aculink810</td>
+                    <td>physical</td>
+                    <td>100</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>acurev1310</td>
+                    <td>physical</td>
+                    <td>200</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>acurev1320</td>
+                    <td>physical</td>
+                    <td>200</td>
+                    <td>true</td>
+                </tr>
+            </tbody>
+        </table>
+        <iframe class="frame1 floatleft" src="http://127.0.0.1:5500/script_14.html" width="400" height="300" name="acucloud">acucloud
+            login
+        </iframe>
+
+    </div>
+    <div class="bx2">
+        <span class="s1 clearfix">
+            <span class="s2 floatleft"></span>
+            <span class="s3 floatright"></span>
+        </span>
+    </div>
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            
+        }
+    </script>
+
+</body>
+
+</html>

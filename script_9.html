@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Option Drop Down</title>
+    <style>
+               /* 美化select元素 */
+        select {
+            appearance: none; /* 移除默认样式 */
+            -webkit-appearance: none; /* 兼容Webkit */
+            -moz-appearance: none; /* 兼容Firefox */
+            background-color: #f0f0f0; /* 背景颜色 */
+            border: 1px solid #ccc; /* 边框 */
+            border-radius: 5px; /* 圆角 */
+            padding: 10px; /* 内边距 */
+            font-size: 16px; /* 字体大小 */
+            color: #333; /* 字体颜色 */
+            outline: none; /* 移除焦点边框 */
+            width: 200px; /* 宽度 */
+        }
+
+        /* 添加下拉箭头的容器 */
+        .select-container {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .select-container::after {
+            content: '▼'; /* 下拉箭头字符 */
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            pointer-events: none; /* 防止箭头阻挡点击 */
+            color: #333; /* 箭头颜色 */
+            font-size: 12px; /* 箭头大小 */
+        }
+    </style>
+</head>
+<body>
+   <select class="meter-test">
+        <option value="810"> AcuLink 810 </option>
+        <option value="1310"> AcuRev 1310</option>
+   </select>
+</body>
+</html>
