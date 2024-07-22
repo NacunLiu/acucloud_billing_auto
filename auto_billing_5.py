@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 
-# get_attributes
+# 使用元素的get_attributes方法来获取元素的对应属性
 driver = selenium.webdriver.Chrome('./chromedriver-win64/chromedriver.exe')
 driver.get('http://192.168.60.105:3000')
 time.sleep(3)
