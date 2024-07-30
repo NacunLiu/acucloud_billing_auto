@@ -5,8 +5,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 import time
-
+# 本章内容:隐式等待和显示等待
+# 隐式等待只需要设置一次对所有元素有效
+# 显示等待只对单个元素有效 在selenium中，把显示等待的相关内容封装在WebDriverWait中
 
 service = Service('./chromedriver-win64/chromedriver.exe')
 options = Options()
@@ -28,5 +31,10 @@ login.click()
 time.sleep(10)
 
 driver.implicitly_wait(3)
+
+actions = ActionChains(driver)
+actions.context_click()
+time.sleep(10)
+
 driver.quit()
 

@@ -36,6 +36,19 @@
             color: #333; /* 箭头颜色 */
             font-size: 12px; /* 箭头大小 */
         }
+        option:active {
+            background-color: yellow;
+        }
+        .bx2 {
+            height: 2000px;
+            overflow: hidden;
+        }
+        .hidden-button {
+            margin-top: 1900px;
+        }
+        .hidden-button:active {
+            color:yellow
+        }
     </style>
 </head>
 <body>
@@ -43,5 +56,16 @@
         <option value="810"> AcuLink 810 </option>
         <option value="1310"> AcuRev 1310</option>
    </select>
+   <input type="button" value="alert" onclick="alert('警告弹窗')">
+   <input type="button" value="confirm" onclick="confirm('确认弹窗')">
+   <input type="button" value="prompt" onclick="prompt('提示弹窗')">
+   <div class="bx1"> where is 810? please scroll down </div>
+   <div class="bx2">
+        <input type="button" class="hidden-button" value="click to change">
+   </div>
+   <div class="bx3">
+   <iframe src="./script_15.html" width="600" height="300" frameborder="0" name="reg"><iframe>
+   </div>
+
 </body>
 </html>
