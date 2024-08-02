@@ -10,6 +10,10 @@ import time
 
 # 本章内容:下拉框,警告弹窗,frame标签的处理
 
+# 通过driver里封装的switch_to方法可以进行各种切换操作：切换到警告框 driver.switch_to.alert 切换到frame driver.switch_to.frame(id/name)
+# 从frame返回到主页面 driver.switch_to.default_content()
+# 切换到新的窗口 driver.switch_to.window(handle)
+
 # 下拉选择框可以通过CSS直接处理，也可以通过selenium中封装的Select类去处理，而且会显得更方便
 # 使用Select类，先创建一个对象,并且传入select元素，select = Select(element)
 # 之后操作select进行选择,操作方法有select_by_index(index) select_by_value(value) select_by_visible_text(text)
@@ -23,7 +27,7 @@ import time
 # js = 'window.scrollTo(0,1000)' driver.execute_script(js) 总共分为两步:第一步包裹js语句 第二步使用driver去执行js语句
 
 # frame表单切换
-# 第一步driver.switch_to.frame(frame_reference) 切换到指定的frame,frame_reference可以为frame的name,id或者定位到的frame元素
+# 第一步driver.switch_to.frame(frame_reference) 切换到指定的frame,frame_reference可以为三个值：frame的name,id或者直接定位frame元素
 # 第二步恢复页面 driver.switch_to.default_content()
 
 

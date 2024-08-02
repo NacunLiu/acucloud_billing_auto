@@ -17,7 +17,7 @@ import time
 
 service = Service('./chromedriver-win64/chromedriver.exe')
 options = Options()
-driver = selenium.webdriver.Chrome(service=service, options=options)
+driver = selenium.webdriver.Chrome('./chromedriver-win64/chromedriver.exe')
 driver.implicitly_wait(10)
 driver.get('http://127.0.0.1:5500/script_6_mouse_key.html?#')
 time.sleep(3)
@@ -52,5 +52,7 @@ time.sleep(3)
 # 拖拽这个按钮
 actions.drag_and_drop_by_offset(submit, 200, 400).perform()
 time.sleep(3)
+
+driver.quit()
 
 
