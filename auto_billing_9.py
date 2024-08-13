@@ -33,16 +33,20 @@ import time
 
 # drop-menu/scroll/pop-window//login-fail/snap-shot/
 # 创建WebDriver实例
-service = Service('./chromedriver-win64/chromedriver.exe')
-options = Options()
-driver = selenium.webdriver.Chrome(service=service, options=options)
+
+try:
+    chrome_service = Service('./chromedriver-win64/chromedriver.exe')
+    chrome_options = Options()
+    driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+except Exception as e:
+    driver = selenium.webdriver.Chrome('./chromedriver-win64/chromedriver.exe')
+
 driver.implicitly_wait(10)
 driver.maximize_window()
 # 打开页面
 driver.get(
     'http://127.0.0.1:5500/script_9.html')
 actions = ActionChains(driver)
-
 
 # 查找下拉菜单
 dropdown = Select(driver.find_element(By.CLASS_NAME, 'meter-test'))
@@ -61,7 +65,7 @@ time.sleep(3)
 
 # 获取当前选中的选项
 selected_option = dropdown.first_selected_option
-print(selected_option.text)  
+print(selected_option.text)
 time.sleep(3)
 
 # 查找并且点击警告弹窗
@@ -72,7 +76,7 @@ alert = driver.switch_to.alert
 time.sleep(3)
 alert.dismiss()
 
-#查找并且点击确认弹窗
+# 查找并且点击确认弹窗
 actions.click(driver.find_element(By.CSS_SELECTOR, 'input[value="confirm"]')).perform()
 time.sleep(3)
 confirm = driver.switch_to.alert
@@ -107,7 +111,6 @@ time.sleep(3)
 driver.find_element(By.CSS_SELECTOR, 'input[type="text"]').send_keys(Keys.CONTROL, 'v')
 # 将driver切换回到原来的页面
 driver.switch_to.default_content()
-
 
 actions.click_and_hold(driver.find_element(By.CSS_SELECTOR, '.hidden-button')).perform()
 time.sleep(3)

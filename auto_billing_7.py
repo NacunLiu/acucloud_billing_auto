@@ -9,6 +9,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 
 # 本章内容:对键盘的操作
+# 基本操作 key_up key_down send_keys()
+# 使用actions.key_down(Keys.CONTROL)来模拟键盘操作按下按键，只能传递一个参数，后边必须跟随actions.key_up(Keys.CONTROL)来释放按键
+# 如果不跟随key_up释放按键会一直保持键盘按下状态
+# 虽然actions.key_down()只接受一个参数但是可以在语句中调用链中组合操作
+# 比如: actions.key_down(Keys.CONTROL).send_keys('a').key_up(Keys.CONTROL).perform()来执行全选操作
 # 键盘的操作被封装在了Keys类中，使用keys.'键名'进行操作
 # send_keys('aculink810')输入指定文本内容
 # send_keys(keys.ENTER/TAB/ESCAPE/BACK_SPACE/DELETE/SAPCE/SHIFT/CONTROL)特殊键盘操作
@@ -18,9 +23,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 # 显示等待： webDriverWait(driver, timeout=10, poll_frequency=0.5)默认等待时间是0.5秒找一次
 # wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, "input[type='text']")))
 # 鼠标悬在类名上，按住CONTROL点击类名进入底层查看内容
-service = Service('./chromedriver-win64/chromedriver.exe')
-options = Options()
-driver = selenium.webdriver.Chrome(service=service, options=options)
+try:
+    chrome_service = Service('./chromedriver-win64/chromedriver.exe')
+    chrome_options = Options()
+    driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+except Exception as e:
+    driver = selenium.webdriver.Chrome('./chromedriver-win64/chromedriver.exe')
+
 driver.get('https://dev.acucloud.accuenergy.com/')
 driver.maximize_window()
 actions = ActionChains(driver)

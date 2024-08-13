@@ -9,7 +9,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 
 # 本章内容：对测试结果进行截图 验证码的处理
-# 使用 driver.get_screenshot_as_file(imgpath), ()内填入保存图片的地址
+# 使用 driver.get_screenshot_as_file('img_path'), ()内填入保存图片的地址
+
 
 # 验证码的处理办法：去掉验证码(测试环境下) 设置万能验证码(测试和生产环境) 验证码识别技术(通过python-tesseract来识别图片验证码) 记录cookie(通过记录cookie进行跳过登录)
 # 使用cookie绕过验证码的方法：1.通过手动登录成功之后，服务器会返回一个有效的带有sessionid的cookie
@@ -21,10 +22,13 @@ import time
 # 获取单个cookie driver.get_cookie(name) 获取所有cookie driver.get_cookies() 添加cookie driver.add_cookie(cookie_dict)
 
 
+try:
+    chrome_service = Service('./chromedriver-win64/chromedriver.exe')
+    chrome_options = Options()
+    driver = selenium.webdriver.Chrome(service=chrome_service, options=chrome_options)
+except Exception as e:
+    driver = selenium.webdriver.Chrome('./chromedriver-win64/chromedriver.exe')
 
-service = Service('chromedriver-win64\chromedriver.exe')
-options = Options()
-driver = selenium.webdriver.Chrome(service=service, options=options)
 driver.get('https://dev.acucloud.accuenergy.com')
 actions = ActionChains(driver)
 
@@ -56,7 +60,7 @@ print(cookies)
 time.sleep(3)
 
 # 添加一个cookie
-driver.add_cookie({'name':'_user', 'value': 'nacun'})
+driver.add_cookie({'name': '_user', 'value': 'nacun'})
 time.sleep(3)
 
 # 再次点击发送请求之后获取cookie

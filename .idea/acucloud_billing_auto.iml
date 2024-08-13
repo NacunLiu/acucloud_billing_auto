@@ -4,5 +4,8 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="pythonProject" />
+    <orderEntry type="module" module-name="operation_system" />
+    <orderEntry type="module" module-name="Acuvim2v3_rs485" />
   </component>
 </module>

@@ -15,19 +15,23 @@ import time
 # 拖拽actions.drag_and_drop(source, target)只在App自动化里使用, 悬停actions.move_to_element(element)
 # perform()，以上所有的方法必须通过.perform()才会执行，否则只是将相应方法添加到了类中
 
-service = Service('./chromedriver-win64/chromedriver.exe')
-options = Options()
-driver = selenium.webdriver.Chrome('./chromedriver-win64/chromedriver.exe')
+try:
+    chrome_service = Service('./chromedriver-win64/chromedriver.exe')
+    chrome_options = Options()
+    driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+except Exception as e:
+    driver = selenium.webdriver.Chrome('./chromedriver-win64/chromedriver.exe')
+
 driver.implicitly_wait(10)
 driver.get('http://127.0.0.1:5500/script_6_mouse_key.html?#')
 time.sleep(3)
 
 # 设置浏览器窗口大小
-driver.set_window_size(1260,1080)
+driver.set_window_size(1260, 1080)
 time.sleep(3)
 
 # 浏览器窗口定位
-driver.set_window_position(100,100)
+driver.set_window_position(100, 100)
 time.sleep(3)
 
 # 浏览器窗口最大化
@@ -42,6 +46,7 @@ submit = driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
 # 点击这个按钮, 任何鼠标操作后边都需要加上.perform()才能开始执行操作
 actions.click_and_hold(submit).perform()
 time.sleep(3)
+actions.release().perform()
 
 # 定位username双击选中
 username = driver.find_element(By.CSS_SELECTOR, 'input[type="text"]')
@@ -54,5 +59,3 @@ actions.drag_and_drop_by_offset(submit, 200, 400).perform()
 time.sleep(3)
 
 driver.quit()
-
-
