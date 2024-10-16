@@ -17,7 +17,7 @@ import time
 # 对于创建driver对象，在旧版本的selenium中可以使用driver = webdriver.Chrome('./chromedriver-win64/chromedriver.exe')的方法直接传递可执行驱动的路径
 # 新版本的selenium中，更推荐使用service = Service('./chromedriver-win64/chromedriver.exe')
 # options = Options()
-# driver = webdriver.Chrome(service=service, options=options)的方法来创建驱动对象
+# driver = webdriver.Chrome(service=service, options=options)的方法来创建驱动对象版本需要对应
 
 
 # 标准操作窗口最大化，设置隐式等待时间
