@@ -8,6 +8,10 @@ import unittest
 # 参数化：为了解决相同操作不同数据的问题，避免代码的冗余 根据需求动态获取参数并引用的过程就是参数化
 # unittest并不带参数化,我们需要单独的组件parameterized进行参数化,通过@parameterized.expand(元组列表)
 # 在实际测试中，测试数据是不允许出现在代码中的，而是单独保存在一个文件中，再通过代码读出来传递给测试脚本
+# 使用@unittest.skip("Reason for skipping this test")对未完成的测试代码进行跳过
+# 使用@unittest.skipIf(1 == 1, "skipping because 1 equals 1")当满足条件时跳过
+# 使用 suite = unittest.defaultTestLoader.discover(start_dir, pattern='test*.py') 从start_dir开始向下递归查找符合pattern命名的模块
+# 并且加载其中所有的测试用例，适用于有大量测试文件并且遵循特定命名规则的情况
 
 
 # TestCase TestSuite TestLoader(module --run) TestRunner(--run) TextTestRunner Fixture(start/end run)
@@ -61,8 +65,9 @@ if __name__ == '__main__':
     suite.addTest(Test01('test01'))
     # Add all test method starts with test in the class
     # 在最新的unittest中已经不再使用unittest.makeSuite进行整个测试类的加载
-    # 最新的方法是使用 loader = unittest.TestLoader() suite.addTests(loader.loadTestsFromTestCase(TestCase))
-    # suite.addTest((unittest.makeSuite(Test03))) 
+    # 最新的方法是使用 loader = unittest.TestLoader()
+    # suite.addTests(loader.loadTestsFromTestCase(TestCase))
+    # suite.addTest((unittest.makeSuite(Test03)))
     # provide folder and name of module adding all test class and methods in the module
     # unittest.TextTestRunner().run(unittest.TestLoader().discover("test", pattern="test*.py" ))
     unittest.TextTestRunner().run(suite)

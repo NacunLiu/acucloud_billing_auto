@@ -11,7 +11,7 @@ import time
 # 本章内容：selenium中定位元素的7种方法
 # 8 different ways to locate an element: By.ID By.CLASS_NAME
 # By.TAG_NAME By.LINK_TEXT By.PARTIAL_LINK_TEXT 
-# By.LINK_TEXT 用于查找与提供的完整链接文本匹配的 <a> 元素 比如 <a href="home.html">Home</a> 使用driver.find_element(By.LINKK_TEXT, 'Home')直接填写连接中的文本内容
+# By.LINK_TEXT 用于查找与提供的完整链接文本匹配的 <a> 元素 比如 <a href="home.html">Home</a> 使用driver.find_element(By.LINk_TEXT, 'Home')直接填写连接中的文本内容
 # By.PARTIAL_LINK_TEXT 用于查找包含括号中内容的链接文本的 <a> 元素 对于上一个a标签查找使用 driver.find_element(By.PARTIAL_LINK_TEXT, 'Ho')查找所有包含Ho的连接
 # By.XPATH By.CSS_SELECTOR: for XPATH use //div[@id="main"] format  //+tagname[@attribute="value"] //a[text()="content"]文本内容或者使用包含某个内容 //a[contains(text(), "content")]
 # 对于创建driver对象，在旧版本的selenium中可以使用driver = webdriver.Chrome('./chromedriver-win64/chromedriver.exe')的方法直接传递可执行驱动的路径

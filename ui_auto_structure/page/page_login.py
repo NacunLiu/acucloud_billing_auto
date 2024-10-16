@@ -1,6 +1,5 @@
 import unittest
 import selenium
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -26,7 +25,7 @@ class PageLogin:
 
     #     输入密码
     def page_input_password(self, password):
-        self.driver.find_element(By.CSS_SELECTOR, "input[type='text']").send_keys(password)
+        self.driver.find_element(By.CSS_SELECTOR, "input[type='password']").send_keys(password)
 
     #     点击登录
     def page_click_login(self):
@@ -38,6 +37,7 @@ class PageLogin:
 
     #     组装登录业务方法， 给业务层调用
     def page_login(self, username, password):
+        time.sleep(3)
         self.page_input_username(username)
         self.page_input_password(password)
         self.page_click_login()

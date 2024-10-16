@@ -8,7 +8,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-
 # Setup WebDriver with ChromeDriverManager会自动下载对应的driver，不需要再手动配置
 # service = ChromeService(executable_path=ChromeDriverManager().install())
 service = ChromeService()
@@ -27,7 +26,7 @@ time.sleep(3)
 driver.set_window_size("960", "540")
 time.sleep(3)
 # 设置窗口位置
-driver.set_window_position("200","100")
+driver.set_window_position("200", "100")
 time.sleep(3)
 
 driver.maximize_window()
@@ -61,7 +60,7 @@ smt.click()
 time.sleep(10)
 
 # 捕获弹窗
-wait = WebDriverWait(driver,10)
+wait = WebDriverWait(driver, 10)
 alert = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "button[aria-label='Close']")))
 alert.click()
 
@@ -72,7 +71,6 @@ time.sleep(10)
 # alert = driver.switch_to.alert
 # alert.accept()
 # time.sleep(3)
-
 
 
 # 浏览器后退
@@ -86,13 +84,10 @@ time.sleep(3)
 driver.refresh()
 time.sleep(3)
 
-
-
 # title获取前端页面title, 用它判断是否已经打开当前页面，也可以用title来切换窗口
 title = driver.title
 print(title)
 time.sleep(3)
-
 
 # current_url 获取当前页面的url
 url = driver.current_url
@@ -104,7 +99,6 @@ driver.close()
 time.sleep(3)
 # 关闭当前窗口
 driver.quit()
-
 
 # # Conf ID# 378875201714
 # # clerkspublic@markham.ca
