@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,20 @@
             height: 200px;
             width: 200px;
             border: solid 1px black;
-            background-color: grey;
+            background-color: lightblue;
     </style>
 </head>
+
 <body>
-    <form class="register">
-        user: <input type="text">
-        password: <input type="password">
-        login <input type="submit">
+    <form class="register" action="https://www.google.com" method="GET">
+        <label for="user">User:</label>
+        <input type="text" id="user" name="user">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        login <input type="submit" value="Login">
+    </form>
 </body>
+
 </html>
