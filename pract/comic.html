@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Test Page</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f9f4d7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #ff6f61;
+        }
+
+        .form-container {
+            background: #fff3cd;
+            padding: 20px;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ffcc00;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button.submit {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button.submit:active {
+            background-color: orange;
+        }
+
+        #draggable {
+            width: 50px;
+            height: 50px;
+            background-color: #6fa8dc;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: grab;
+            transition: background-color 0.3s ease;
+        }
+
+        #draggable:active {
+            background-color: #ff6f61;
+            cursor: grabbing;
+        }
+
+        .alert-button {
+            background-color: #f1c40f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .alert-button:hover {
+            background-color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Selenium Test Page</h1>
+
+    <div class="form-container">
+        <form>
+            <input type="text" id="name" placeholder="Enter your name" required><br>
+            <input type="password" id="password" placeholder="Enter your password" required><br>
+            <button type="submit" class="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="draggable" draggable="true"></div>
+
+    <button class="alert-button" onclick="showAlert()">Click Me</button>
+
+    <script>
+        // Enable dragging of the box
+        const draggable = document.getElementById('draggable');
+        let offsetX, offsetY;
+
+        draggable.addEventListener('dragstart', (e) => {
+            offsetX = e.offsetX;
+            offsetY = e.offsetY;
+        });
+
+        document.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        document.addEventListener('drop', (e) => {
+            const x = e.pageX - offsetX;
+            const y = e.pageY - offsetY;
+            draggable.style.position = 'absolute';
+            draggable.style.left = `${x}px`;
+            draggable.style.top = `${y}px`;
+        });
+
+        // Show alert
+        function showAlert() {
+            alert("This is an alert box!");
+        }
+    </script>
+</body>
+</html>

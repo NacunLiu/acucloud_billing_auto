@@ -2,7 +2,7 @@ import selenium
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
-from seleniu.webdriver.support import Expected_Conditions as EC
+from selenium.webdriver.support import Expected_Conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
