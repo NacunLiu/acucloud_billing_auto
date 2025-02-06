@@ -4,10 +4,14 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from time import sleep
 
-driver = selenium.webdriver.Chrome('./chromedriver-win64/chromedriver.exe')
-driver.get('https://dev.acucloud.accuenergy.com')
+chrome_service = Service('./chromedriver-win64/chromedriver.exe')
+chrome_options = Options()
+driver = selenium.webdriver.Chrome(service=chrome_service, options=chrome_options)
+driver.get('http://127.0.0.1:5500/script_15.html')
 driver.implicitly_wait(10)
 driver.set_window_size(400, 800)
 sleep(1)
@@ -21,7 +25,7 @@ driver.maximize_window()
 wait = WebDriverWait(driver,10)
 usr = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="text"]')))
 pwd = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="password"]')))
-sbt = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'button[type="submit"]')))
+sbt = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="submit"]')))
 
 usr.send_keys('nacun.liu@accuenergy.com')
 sleep(1)

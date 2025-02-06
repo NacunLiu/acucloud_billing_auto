@@ -13,11 +13,15 @@ import time
 # By.TAG_NAME By.LINK_TEXT By.PARTIAL_LINK_TEXT 
 # By.LINK_TEXT 用于查找与提供的完整链接文本匹配的 <a> 元素 比如 <a href="home.html">Home</a> 使用driver.find_element(By.LINk_TEXT, 'Home')直接填写连接中的文本内容
 # By.PARTIAL_LINK_TEXT 用于查找包含括号中内容的链接文本的 <a> 元素 对于上一个a标签查找使用 driver.find_element(By.PARTIAL_LINK_TEXT, 'Ho')查找所有包含Ho的连接
+# what is XPATH? How does it work in selenium?
+# XPATH is a XML query language used to navigate through elements in XML or HTML, XPATH treats an HTML document as a tree structure
 # By.XPATH By.CSS_SELECTOR: for XPATH use //div[@id="main"] format  //+tagname[@attribute="value"] //a[text()="content"]文本内容或者使用包含某个内容 //a[contains(text(), "content")]
 # 对于创建driver对象，在旧版本的selenium中可以使用driver = webdriver.Chrome('./chromedriver-win64/chromedriver.exe')的方法直接传递可执行驱动的路径
-# 新版本的selenium中，更推荐使用service = Service('./chromedriver-win64/chromedriver.exe')
-# options = Options()
-# driver = webdriver.Chrome(service=service, options=options)的方法来创建驱动对象版本需要对应
+# 新版本的selenium中特别是selenium 4.0以后的版本，不再接受直接传递raw path的方法来进行WebDriver Initialization, 
+# 我们需要先创建service object,service = Service('./chromedriver-win64/chromedriver.exe')
+# options = Options(),options的作用是set the behavior of the driver
+# options.add_argument("--start-maximized")Start in maximized window, options.add_argument("--disable-notifications")Disable notifications, options.add_argument("--headless")Run in headless mode (no GUI)
+# 之后使用传递service和options对象参数的方法来创建driver driver = webdriver.Chrome(service=service, options=options)的方法
 
 
 # 标准操作窗口最大化，设置隐式等待时间

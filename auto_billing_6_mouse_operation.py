@@ -10,6 +10,7 @@ import time
 
 # 本章内容:鼠标的操作
 # 使用ActionChains类来操作鼠标的接口进行单击，双击，拖拽等操作，selenium将所有鼠标操作封装在ActionChains类中
+# 使用ActionChains(driver)创建一个action对象，之后使用action.click/context_click(element)的方法对元素操作
 # 在需要导入的类名的最后一个字母后边使用"Ctrl+Alt+Space"或者"Alt+Enter"的快捷键进行自动导包
 # 相关操作有，右击actions.context_click(element),单击actions.click(element),双击actions.double_click(element)
 # 拖拽actions.drag_and_drop(source, target)只在App自动化里使用, 悬停actions.move_to_element(element)
