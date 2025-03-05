@@ -27,7 +27,7 @@ driver = selenium.webdriver.Edge('./edgedriver_win64/msedgedriver.exe')
 driver.get('http://localhost:3000/')
 #
 # # 获取列表
-# table = driver.find_element(By.CSS_SELECTOR, 'table')
+table = driver.find_element(By.CSS_SELECTOR, 'table')
 #
 # # 获取表头
 headers = table.find_elements(By.XPATH, ".//thead//th")
@@ -36,7 +36,11 @@ header_names = [header.text for header in headers]
 print(header_names)
 
 # # 获取表格体中的数据，形成一个二维数组
-rows = table.find_elements(By.XPATH, ".//tbody//tr")
+rows = table.find_elements(By.XPATH, ".//tbody//tr") # 这个XPATH语句表示在当前元素中查找的所有tbody子元素的所有tr子元素
+#  . 表示当前元素, //表示所有直接和非直接子元素, 在元素后面加上[@attribute_name=value]查找具有特定属性值的元素
+#  find_elements(By.XPATH, ".//tbody//*[@class='power']") 查找当前元素的所有tbody子元素的所有子元素中类名为power的元素, *表示所有元素
+# find_elements(By.XPATH, ".//tbody//tr[@class='power']") 查找当前元素的所有tbody子元素的所有类名为power的tr子元素
+
 table_data = []
 #
 for row in rows:
