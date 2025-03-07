@@ -34,6 +34,8 @@ driver.implicitly_wait(10)
 time.sleep(3)
 
 wait = WebDriverWait(driver, 3, 0.1)
+
+# presence_of_element_located()是一个EC下面的函数，他只接收一个locator元组参数，所以我们必须将(By.CSS_SELECTOR, 'input[type="text"]')包裹起来作为一个元组实参传递
 user = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="text"]')))
 pwd = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'input[type="password"]')))
 login = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'button[type="submit"]')))
