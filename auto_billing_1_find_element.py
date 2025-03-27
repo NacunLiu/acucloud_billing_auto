@@ -23,6 +23,29 @@ import time
 # options.add_argument("--start-maximized")Start in maximized window, options.add_argument("--disable-notifications")Disable notifications, options.add_argument("--headless")Run in headless mode (no GUI)
 # 之后使用传递service和options对象参数的方法来创建driver driver = webdriver.Chrome(service=service, options=options)的方法
 
+# CSS_SELECTOR定位器就是将前端的CSS定位器加引号写进selenium中而已
+
+# <button class="btn primary">Click</button>
+# driver.find_element(By.CSS_SELECTOR, ".btn.primary")多个class名称之间不能加空格，加空格就表示后代关系了
+
+
+
+# <input type="email" name="user_email">
+# driver.find_element(By.CSS_SELECTOR, "input[type='email']")
+
+# <form id="login-form">
+#   <input type="password" name="pwd"> 
+# </form>
+#   form#login-form > input[type='password']
+
+
+# <ul>
+#    <li>Item 1</li>
+#    <li>Item 2</li>
+#    <li>Item 3</li> 
+# </ul>
+# ul > li:nth-child(3)
+
 
 # 标准操作窗口最大化，设置隐式等待时间
 try:

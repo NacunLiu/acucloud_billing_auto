@@ -118,4 +118,3 @@ actions.release().perform()
 time.sleep(1)
 
 # 关闭浏览器
-driver.quit()

@@ -32,3 +32,4 @@ class Base:
 
     def base_get_screenshot(self):
         self.driver.get_screenshot_as_file(f'../report/{time.strftime("%Y %m %d %H_%M_%S")}.png')
+        

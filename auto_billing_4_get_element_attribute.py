@@ -6,6 +6,8 @@ import time
 
 # get element attributes
 # size text get_attribute() is_displayed is_enabled is_selected
+# 注意element.get_attribute("value")是用来获取诸如 id class type value checked href src的值
+# 不能获取 像 text 或者 color之类的样式值
 driver = selenium.webdriver.Edge('./edgedriver_win64/msedgedriver.exe')
 driver.get('http://127.0.0.1:5500/practice2.html')
 time.sleep(10)
@@ -70,6 +72,6 @@ time.sleep(3)
 
 btns[1].click()
 
-context_click(element)右击  double_click(element)双击 drag_and_drop(source, target)模拟鼠标拖动
-move_to_element(element)悬停 perform()执行以上操作，之前只是添加到ActionChains类里边，并没有执行，需要实例.perform()执行
+# context_click(element)右击  double_click(element)双击 drag_and_drop(source, target)模拟鼠标拖动
+# move_to_element(element)悬停 perform()执行以上操作，之前只是添加到ActionChains类里边，并没有执行，需要实例.perform()执行
 
