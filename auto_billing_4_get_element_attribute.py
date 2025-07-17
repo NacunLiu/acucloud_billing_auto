@@ -4,10 +4,32 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 
-# get element attributes
-# size text get_attribute() is_displayed is_enabled is_selected
-# 注意element.get_attribute("value")是用来获取诸如 id class type value checked href src的值
-# 不能获取 像 text 或者 color之类的样式值
+# get element attributes获取HTML元素的标签内属性值 不包括标签内文本或者CSS属性
+# 注意element.get_attribute("value")是用来获取诸如 id class type value checked href src等的写在标签里的附加信息
+
+# 比如 <input type="text" id="user" name="username" value="admin" disabled> 
+
+# | Attribute  | 含义                     |
+# | ---------- | ---------------------- |
+# | `type`     | 控件类型（如 text, password） |
+# | `id`       | 元素唯一标识                 |
+# | `name`     | 表单字段名                  |
+# | `value`    | 当前输入值                  |
+# | `disabled` | 是否被禁用（无值时返回 `"true"`）  |
+
+# el = driver.find_element(By.CSS_SELECTOR, "#user")
+# el.get_attribute("type"), el.get_attribute("id"), el.get_attribute("name"), el.get_attribute("value")
+# 但是不能获取CSS样式属性 比如 text 或者 color之类的样式值
+
+# <a> hello </a> 这个'hello'是标签内文本 不能使用get_attribute()获取
+# 直接使用 el.text 获取
+
+# 如果要获取CSS样式 那么使用 el.value_of_css_property()获取CSS 属性例如 width, height, padding, margin, display, visibility, opacity等
+# 比如 el.value_of_css_property("color"), el.value_of_css_property("font-size"), el.value_of_css_property("background-color")
+
+# 使用el.is_selected(), el.is_enabled(), el.is_displayed()来获取元素是否被选中或者开启或者显示在页面上(隐藏时返回False)
+
+
 driver = selenium.webdriver.Edge('./edgedriver_win64/msedgedriver.exe')
 driver.get('http://127.0.0.1:5500/practice2.html')
 time.sleep(10)
@@ -74,4 +96,5 @@ btns[1].click()
 
 # context_click(element)右击  double_click(element)双击 drag_and_drop(source, target)模拟鼠标拖动
 # move_to_element(element)悬停 perform()执行以上操作，之前只是添加到ActionChains类里边，并没有执行，需要实例.perform()执行
+
 

@@ -58,5 +58,4 @@ time.sleep(3)
 # 拖拽这个按钮,参数分别是被拖拽元素 x轴坐标移动距离正值向右负值向左 y轴坐标移动距离正值向下负值向上
 actions.drag_and_drop_by_offset(submit, 200, 400).perform()
 time.sleep(3)
-
 driver.quit()

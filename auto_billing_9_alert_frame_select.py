@@ -10,13 +10,19 @@ import time
 
 # 本章内容:下拉框,警告弹窗,frame标签的处理
 
-# 通过driver里封装的switch_to方法可以进行各种切换操作：切换到警告框 driver.switch_to.alert 切换到frame driver.switch_to.frame(id/name)
-# 从frame返回到主页面 driver.switch_to.default_content()
+# 通过driver里封装的switch_to方法可以进行各种切换操作：切换到警告框 driver.switch_to.alert 切换到frame driver.switch_to.frame(id/name)  切换窗口句柄 driver.switch_to.window(window_handle)
+# 从frame返回到主页面 driver.switch_to.default_content() 其他从警告窗等返回不需要这个语句,直接dismiss()/confirm()就可以了
 # 切换到新的窗口 driver.switch_to.window(handle)
 
 # 下拉选择框可以通过CSS直接处理，也可以通过selenium中封装的Select类去处理，而且会显得更方便
 # 使用Select类，先创建一个对象,并且传入select元素，select = Select(element)
 # 之后操作select进行选择,操作方法有select_by_index(index) select_by_value(value) select_by_visible_text(text)
+# 注意：select对象是整个下拉菜单包裹,里面包含所有下拉菜单中的option
+# 使用select.selected_by_index/value/visible_text只是选中其中的一个option但是它并不返回这个元素,只是选中了但是没有返回任何内容,想要获得选中的元素需要 selected = select.first_selected_option 返回选中元素
+# 还可以使用select.options获取所有的option内容
+# for option in select.options:
+# print(option.get_attribute("value"))
+
 
 # 警告弹窗有三种 alert, confirm, prompt
 # 通过driver.switch_to.alert 切换到弹窗

@@ -1,16 +1,24 @@
 import selenium
 from selenium import webdriver
+import selenium.webdriver
+import selenium.webdriver.chrome
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
+import selenium.webdriver.support
+from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager import ChromeDriverManager
 import time
+# Selenium 第一章 元素定位
 
 # 本章内容：selenium中定位元素的7种方法
 # 8 different ways to locate an element: By.ID By.CLASS_NAME
 # By.TAG_NAME By.LINK_TEXT By.PARTIAL_LINK_TEXT 
+
+# By.TAG_NAME特别适用于像list和table中获取元素的方法 比如获取list中的li 获取table中的 tr, th, td等等
+
 # By.LINK_TEXT 用于查找与提供的完整链接文本匹配的 <a> 元素 比如 <a href="home.html">Home</a> 使用driver.find_element(By.LINk_TEXT, 'Home')直接填写连接中的文本内容
 # By.PARTIAL_LINK_TEXT 用于查找包含括号中内容的链接文本的 <a> 元素 对于上一个a标签查找使用 driver.find_element(By.PARTIAL_LINK_TEXT, 'Ho')查找所有包含Ho的连接
 # what is XPATH? How does it work in selenium?
@@ -23,10 +31,17 @@ import time
 # options.add_argument("--start-maximized")Start in maximized window, options.add_argument("--disable-notifications")Disable notifications, options.add_argument("--headless")Run in headless mode (no GUI)
 # 之后使用传递service和options对象参数的方法来创建driver driver = webdriver.Chrome(service=service, options=options)的方法
 
+# 更好的办法是不需要手动下载chrome driver而是使用webdriver_manager直接导入ChromeDriverManger然后直接创建对象
+from webdriver_manager.chrome import ChromeDriverManger
+service = Service(executable_path=ChromeDriverManager().install())
+options = Options()
+driver = webdriver.Chrome(service=service, options=options)
+
 # CSS_SELECTOR定位器就是将前端的CSS定位器加引号写进selenium中而已
 
 # <button class="btn primary">Click</button>
 # driver.find_element(By.CSS_SELECTOR, ".btn.primary")多个class名称之间不能加空格，加空格就表示后代关系了
+# button.btn.primary[type="submit"] 这个是多重选择，集合了tag, class和type
 
 
 
