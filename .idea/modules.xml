@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Acuvim2v3_rs485/.idea/Acuvim2v3_rs485.iml" filepath="$PROJECT_DIR$/../Acuvim2v3_rs485/.idea/Acuvim2v3_rs485.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/acucloud_billing_auto.iml" filepath="$PROJECT_DIR$/.idea/acucloud_billing_auto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../modbus_bacnet/.idea/modbus_bacnet.iml" filepath="$PROJECT_DIR$/../modbus_bacnet/.idea/modbus_bacnet.iml" />
       <module fileurl="file://$PROJECT_DIR$/../operation_system/.idea/operation_system.iml" filepath="$PROJECT_DIR$/../operation_system/.idea/operation_system.iml" />
       <module fileurl="file://$PROJECT_DIR$/../grid_point_modbus_readings/.idea/pythonProject.iml" filepath="$PROJECT_DIR$/../grid_point_modbus_readings/.idea/pythonProject.iml" />
     </modules>

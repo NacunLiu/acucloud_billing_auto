@@ -1,24 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="72148c20-016d-4158-ad69-35a7be960a92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../operation_system/chapter_3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atuo_billing_10.py" beforeDir="false" afterPath="$PROJECT_DIR$/atuo_billing_10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_billing_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_billing_11.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_billing_14.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_14.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_billing_15.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_15.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_billing_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_billing_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_billing_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_billing_9.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_9.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grid_point_modbus_readings/read_modbus_90.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../operation_system/chapter_6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../operation_system/d1_sll_node_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../operation_system/d4_lru_cache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../operation_system/d5_lfu_cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HTML_Notes" beforeDir="false" afterPath="$PROJECT_DIR$/../HTML_Notes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acuLink810APIAutoFrameWork" beforeDir="false" afterPath="$PROJECT_DIR$/../acuLink810APIAutoFrameWork" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/acucloud_billing_auto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/acucloud_billing_auto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_billing_3_window_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_3_window_operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_billing_7_keys_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_billing_7_keys_operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acuview_test/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acuview_test/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../acuview_test/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acuview_test/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acuview_test/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/../acuview_test/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acuvim2v3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../acuvim2v3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bacnet_daisy_chain" beforeDir="false" afterPath="$PROJECT_DIR$/../bacnet_daisy_chain" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../development_test" beforeDir="false" afterPath="$PROJECT_DIR$/../development_test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker deployment" beforeDir="false" afterPath="$PROJECT_DIR$/../docker deployment" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grid_point_modbus_readings" beforeDir="false" afterPath="$PROJECT_DIR$/../grid_point_modbus_readings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grid_point_modbus_readings/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../grid_point_modbus_readings/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../grid_point_modbus_readings/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../grid_point_modbus_readings/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../grid_point_modbus_readings/.idea/pythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../grid_point_modbus_readings/.idea/pythonProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../grid_point_modbus_readings/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../grid_point_modbus_readings/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grid_point_modbus_readings/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/../grid_point_modbus_readings/common.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../grid_point_modbus_readings/grid_point_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../grid_point_modbus_readings/grid_point_settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../grid_point_modbus_readings/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/../grid_point_modbus_readings/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../operation_system/chapter_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../operation_system/chapter_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../operation_system/chapter_2" beforeDir="false" afterPath="$PROJECT_DIR$/../operation_system/chapter_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leetcode" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modbus_bacnet/data_packet_loss_pymodbus.py" beforeDir="false" afterPath="$PROJECT_DIR$/../modbus_bacnet/data_packet_loss_pymodbus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../operation_system" beforeDir="false" afterPath="$PROJECT_DIR$/../operation_system" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../operation_system/d2_dll_node_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../operation_system/d2_dll_node_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../operation_system/d3_fifo_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/../operation_system/d3_fifo_cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pipeline_scripts/test_web" beforeDir="false" afterPath="$PROJECT_DIR$/../pipeline_scripts/test_web" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pytest_ui/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../pytest_ui/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pytest_ui/pages/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pytest_ui/pages/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pytest_ui/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pytest_ui/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pytest_ui/tests/mouse_action_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pytest_ui/tests/mouse_action_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pythonAcuCloudApiAutoFrameWork" beforeDir="false" afterPath="$PROJECT_DIR$/../pythonAcuCloudApiAutoFrameWork" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ui_test" beforeDir="false" afterPath="$PROJECT_DIR$/../ui_test" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,29 +55,60 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../modbus_bacnet" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2kYnbjmuKhIh4npV2cmqmmfcz05" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "C:/Users/Accuenergy/PycharmProjects/acucloud_billing_auto"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.data_packet_loss.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/NacunLiu/Nacun_Work/PycharmProjects/modbus_bacnet&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="data_packet_loss" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="modbus_bacnet" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../modbus_bacnet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../modbus_bacnet/data_packet_loss.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.data_packet_loss" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-14705d77f0bb-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.25659.43" />
       </set>
     </attachedChunks>
   </component>

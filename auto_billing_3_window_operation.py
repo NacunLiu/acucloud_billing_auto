@@ -65,7 +65,10 @@ alert = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "button[aria
 alert.click()
 
 # 获取help链接元素，进行登录
-help_link = driver.find_element(By.CSS_SELECTOR, ".navbar-right li:nth-child(3) a")
+# 选择 class为 navbar-right的类 选择其子元素中 第 3 个 <li> 元素（注意是“所有子元素中的第 3 个”，而不只是 <li> 中的第 3 个）
+# 再从这个 <li> 中选中它内部的 <a> 标签（超链接）
+# 如果是选择第三个li元素 .navbar-right > li:nth-of-type(3) a
+help_link = driver.find_element(By.CSS_SELECTOR, ".navbar-right li:nth-child(3) a") 
 help_link.click()
 time.sleep(10)
 # alert = driver.switch_to.alert

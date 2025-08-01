@@ -7,5 +7,6 @@
     <orderEntry type="module" module-name="pythonProject" />
     <orderEntry type="module" module-name="operation_system" />
     <orderEntry type="module" module-name="Acuvim2v3_rs485" />
+    <orderEntry type="module" module-name="modbus_bacnet" />
   </component>
 </module>
