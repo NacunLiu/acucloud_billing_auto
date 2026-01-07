@@ -21,9 +21,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 # send_keys(Keys.ENTER/TAB/ESCAPE/BACK_SPACE/DELETE/SAPCE/SHIFT/CONTROL)特殊键盘操作
 # send_keys用于发送文本，操作按键和上传三个方面
 
-# send_keys(r"C:\Users\NacunLiu\Desktop\test_file.pdf") 注意 路径钱敏有一个r 代表python的 raw string防止路径中的'\' 被当作转义字符处理
+# send_keys(r"C:\Users\NacunLiu\Desktop\test_file.pdf") 注意 路径前面有一个r 代表python的 raw string防止路径中的'\' 被当作转义字符处理
 # send_keys用于上传文件适合用于 <input type="file">这样的上传场景 直接传入文件路径即可
 # 使用assert校验是否上传成功 assert "upload successful" in driver.page_source
+# <input type="file" id="upload">
+# file_input = driver.find_element(By.ID, "upload")
+# file_input.send_keys("C:/Users/Neil/Desktop/test.pdf")
+
 
 # 组合按键和复杂操作actions.key_down(Keys.CONTROL).send_keys('a').key_up(CONTROL).perform()
 # 显示等待和隐式等待 隐式等待：driver.implicitly_wait(10)，找到元素直接执行，未找到会每隔0.5秒尝试一次知道设置的timeout时间

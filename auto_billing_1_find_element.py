@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 import selenium.webdriver.support
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager import ChromeDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 # Selenium 第一章 元素定位
 
@@ -19,10 +19,17 @@ import time
 
 # By.TAG_NAME特别适用于像list和table中获取元素的方法 比如获取list中的li 获取table中的 tr, th, td等等
 
-# By.LINK_TEXT 用于查找与提供的完整链接文本匹配的 <a> 元素 比如 <a href="home.html">Home</a> 使用driver.find_element(By.LINk_TEXT, 'Home')直接填写连接中的文本内容
+# By.LINK_TEXT 用于查找与提供的完整链接文本匹配的 <a> 元素 比如 <a href="home.html">Home</a> 使用driver.find_element(By.LINK_TEXT, 'Home')直接填写连接中的文本内容
 # By.PARTIAL_LINK_TEXT 用于查找包含括号中内容的链接文本的 <a> 元素 对于上一个a标签查找使用 driver.find_element(By.PARTIAL_LINK_TEXT, 'Ho')查找所有包含Ho的连接
+
 # what is XPATH? How does it work in selenium?
+
 # XPATH is a XML query language used to navigate through elements in XML or HTML, XPATH treats an HTML document as a tree structure
+# XPath is a path language for navigating the HTML (DOM) tree.
+# (By.XPATH, "//*") // is the relative path, it will search anywhere in the html, avoid using the /... absolute path because it breaks if the layout changes
+
+
+
 # By.XPATH By.CSS_SELECTOR: for XPATH use //div[@id="main"] format  //+tagname[@attribute="value"] //a[text()="content"]文本内容或者使用包含某个内容 //a[contains(text(), "content")]
 # 对于创建driver对象，在旧版本的selenium中可以使用driver = webdriver.Chrome('./chromedriver-win64/chromedriver.exe')的方法直接传递可执行驱动的路径
 # 新版本的selenium中特别是selenium 4.0以后的版本，不再接受直接传递raw path的方法来进行WebDriver Initialization, 
@@ -47,6 +54,8 @@ driver = webdriver.Chrome(service=service, options=options)
 
 # <input type="email" name="user_email">
 # driver.find_element(By.CSS_SELECTOR, "input[type='email']")
+# 想同时添加多个条件过滤器 combined together driver.find_element(By.CSS_SELECTOR, "input[type='email'][name='user_email']") In CSS, multiple attribute selectors placed together mean logical AND.
+
 
 # <form id="login-form">
 #   <input type="password" name="pwd"> 
@@ -56,10 +65,13 @@ driver = webdriver.Chrome(service=service, options=options)
 
 # <ul>
 #    <li>Item 1</li>
+#    <div>Oops</div>
 #    <li>Item 2</li>
 #    <li>Item 3</li> 
 # </ul>
 # ul > li:nth-child(3)
+# (By.CSS_SELECTOR, "ul>li:nth-child(3)") 这个选中的是 Item 2 它不考虑种类只考虑第三个子元素并且第三个子元素是li即可被选中
+# (By.CSS_SELECTOR, "ul>li:nth-of-type(3)")This counts only <li> elements, ignoring other tags 因此选中的是 Item 3
 
 
 # 标准操作窗口最大化，设置隐式等待时间
